@@ -38,13 +38,13 @@ st.divider()
 
 # Usamos uma tupla para armazenar as opções válidas.
 # Tuplas são boas aqui porque as opções do jogo não mudam (são imutáveis).
-opcoes_validas = ("pedra", "papel", "tesoura")
+opcoes_validas = ("Pedra", "Papel", "Tesoura")
 
 # Dicionário com as URLs das imagens para cada jogada
 imagens = {
-    "pedra": "https://em-content.zobj.net/source/microsoft-teams/363/rock_1faa8.png", # 🪨
-    "papel": "https://em-content.zobj.net/source/microsoft-teams/363/page-with-curl_1f4c3.png", # 📃
-    "tesoura": "https://em-content.zobj.net/source/microsoft-teams/363/scissors_2702-fe0f.png" # ✂️
+    "Pedra": "https://em-content.zobj.net/source/microsoft-teams/363/rock_1faa8.png", # 🪨
+    "Papel": "https://em-content.zobj.net/source/microsoft-teams/363/page-with-curl_1f4c3.png", # 📃
+    "Tesoura": "https://em-content.zobj.net/source/microsoft-teams/363/scissors_2702-fe0f.png" # ✂️
 }
 
 # --- Placar ---
@@ -97,9 +97,9 @@ if st.button("Jogar!"):
             st.session_state.resultado = ("warning", "### Resultado: 🤝 É um empate!")
 
         # Caso 2: Jogador 1 vence
-        elif (jogada_jogador1 == "pedra" and jogada_oponente == "tesoura") or \
-             (jogada_jogador1 == "tesoura" and jogada_oponente == "papel") or \
-             (jogada_jogador1 == "papel" and jogada_oponente == "pedra"):
+        elif (jogada_jogador1 == "Pedra" and jogada_oponente == "Tesoura") or \
+             (jogada_jogador1 == "Tesoura" and jogada_oponente == "Papel") or \
+             (jogada_jogador1 == "Papel" and jogada_oponente == "Pedra"):
             st.session_state.placar_p1 += 1
             st.session_state.resultado = ("success", "### Resultado: 🏆 Jogador 1 venceu! Parabéns!")
 
